@@ -1,1 +1,1 @@
-# sample_sensor_kit_launch
+# avsystem_sensor_kit_launch
