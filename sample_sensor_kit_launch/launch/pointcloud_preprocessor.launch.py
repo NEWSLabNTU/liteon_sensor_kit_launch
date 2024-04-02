@@ -37,9 +37,8 @@ def launch_setup(context, *args, **kwargs):
         parameters=[
             {
                 "input_topics": [
-                    "/sensing/lidar/top/pointcloud_before_sync",
-                    "/sensing/lidar/left/pointcloud_before_sync",
-                    "/sensing/lidar/right/pointcloud_before_sync",
+                    "/sensing/lidar/top/velodyne_points",
+                    "/sensing/lidar/top/velodyne_points",
                 ],
                 "output_frame": LaunchConfiguration("base_frame"),
                 "input_twist_topic_type": "twist",
