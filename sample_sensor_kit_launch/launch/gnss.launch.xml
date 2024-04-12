@@ -1,6 +1,6 @@
 <launch>
   <arg name="launch_driver" default="true"/>
-  <arg name="gnss_receiver" default="garmin" description="ublox(default), septentrio or <YOUR-GNSS-SENSOR>"/>
+  <arg name="gnss_receiver" default="garmin" description="ublox(default)"/>
 
   <group>
     <push-ros-namespace namespace="gnss"/>
@@ -8,7 +8,7 @@
     <!-- Switch topic name -->
     <let name="navsatfix_topic_name" value="ublox/nav_sat_fix" if="$(eval &quot;'$(var gnss_receiver)'=='ublox'&quot;)"/>
     <let name="navsatfix_topic_name" value="septentrio/nav_sat_fix" if="$(eval &quot;'$(var gnss_receiver)'=='septentrio'&quot;)"/>
-    <let name="navsatfix_topic_name" value="/fix" if="$(eval &quot;'$(var gnss_receiver)'=='garmin'&quot;)/">
+    <let name="navsatfix_topic_name" value="garmin/fix" if="$(eval &quot;'$(var gnss_receiver)'=='garmin'&quot;)"/>
     <let name="orientation_topic_name" value="/autoware_orientation"/>
 
     <!-- Ublox Driver -->
